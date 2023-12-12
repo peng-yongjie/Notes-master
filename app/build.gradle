@@ -1,21 +1,27 @@
-apply plugin: 'com.android.application'
+```java
+apply plugin: 'com.android.application' // 应用 Android 应用程序插件
 
 android {
-    namespace "net.micode.notes"
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
-    useLibrary 'org.apache.http.legacy'
+    namespace "net.micode.notes" // 设置命名空间为 "net.micode.notes"
+    compileSdkVersion 30 // 编译目标版本为 30
+    buildToolsVersion "30.0.0" // 使用版本号为 "30.0.0" 的构建工具
+    useLibrary 'org.apache.http.legacy' // 使用旧版的 Apache HTTP 客户端库
 
     defaultConfig {
-        applicationId "net.micode.notes"
-        minSdkVersion 30
-        targetSdkVersion 30
+        applicationId "net.micode.notes" // 设置应用程序的包名为 "net.micode.notes"
+        minSdkVersion 30 // 最低支持的 Android 版本为 30
+        targetSdkVersion 30 // 目标 Android 版本为 30
     }
 
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            minifyEnabled false // 关闭代码混淆
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt' // 使用默认的 ProGuard 文件和自定义的 ProGuard 规则文件
         }
     }
 }
+
+dependencies {
+    implementation fileTree(dir: 'F:\\Temp\\Notes-master', include: ['*.aar', '*.jar'], exclude: [])
+}
+```

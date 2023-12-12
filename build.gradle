@@ -1,17 +1,18 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// 顶层构建文件，您可以在其中添加所有子项目/模块共有的配置选项。
+
 buildscript {
     repositories {
-        jcenter()
-        google()
+        jcenter() // 添加 JCenter 仓库以获取依赖项
+        google() // 添加 Google 仓库以获取依赖项
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.4.1'
+        classpath 'com.android.tools.build:gradle:7.4.1' // 使用指定版本的 Android Gradle 插件
     }
 }
 
 allprojects {
     repositories {
-        google()
-        jcenter()
+        google() // 添加 Google 仓库以获取依赖项
+        jcenter() // 添加 JCenter 仓库以获取依赖项
     }
 }
